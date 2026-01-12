@@ -1,49 +1,133 @@
-# PDF Text Extractor Web App
+# Legal AI - Advanced Legal Intelligence Platform
 
-This is a simple FastAPI-based web application that allows users to upload PDF files and extract text from them.
+A modern, responsive landing page for Legal AI, an advanced legal intelligence platform that empowers legal professionals with AI-driven insights, document analysis, and intelligent legal research tools.
+
+## Tech Stack
+
+- **Next.js 15** - React framework with App Router
+- **TypeScript** - Type-safe JavaScript
+- **Tailwind CSS** - Utility-first CSS framework
+- **shadcn/ui** - High-quality, accessible React components
+- **Lucide Icons** - Beautiful icon library
 
 ## Features
 
-- **PDF Text Extraction**: Upload PDF files and extract text content using `pypdf`.
-- **Interactive UI**:
-  - **Copy**: One-click copy to clipboard.
-  - **Edit**: Edit the extracted text directly in the browser.
-  - **Close**: Clear the result and reset the view.
-- **Responsive Design**: Clean and professional interface with a dedicated promotion section.
+- **Responsive Design** - Fully responsive across all devices
+- **Dark Mode Support** - Built-in dark mode support
+- **Modern UI Components** - Using shadcn/ui component library
+- **SEO Optimized** - Proper meta tags and semantic HTML
+- **Fast Performance** - Optimized with Next.js best practices
 
-## Prerequisites
+## Pages & Sections
 
-- Python 3.10 or higher
-- `pip` package manager
+### Homepage
+- **Navigation** - Clean, modern navigation bar with smooth scroll
+- **Hero Section** - Compelling headline with CTAs and key metrics
+- **Features Section** - 6 feature cards showcasing AI capabilities:
+  - Document Analysis
+  - Legal Research AI
+  - Compliance Monitoring
+  - Contract Drafting
+  - Predictive Analytics
+  - Team Collaboration
+- **About Section** - Company background and key statistics
+- **Use Cases Section** - Target audiences and their benefits
+- **CTA Section** - Call-to-action with trial signup
+- **Footer** - Comprehensive footer with links
 
-## Installation
+## Getting Started
 
-1. Clone the repository or navigate to the project directory.
-2. Install the required dependencies:
+### Prerequisites
 
-   ```bash
-   pip install fastapi uvicorn python-multipart pypdf
-   ```
+- Node.js 18+
+- npm or yarn
 
-## Usage
+### Installation
 
-1. Start the server:
+1. Install dependencies:
+```bash
+npm install
+```
 
-   ```bash
-   uvicorn main:app --reload
-   ```
+2. Run the development server:
+```bash
+npm run dev
+```
 
-   The server will start at `http://0.0.0.0:8000`.
+3. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-2. Open your web browser and go to:
-   [http://localhost:8000](http://localhost:8000)
+### Build for Production
 
-3. Click on the upload area to select a PDF file.
-4. Click the "Extract Text" button.
-5. The extracted text will appear below the button.
+```bash
+npm run build
+npm start
+```
 
 ## Project Structure
 
-- `main.py`: The FastAPI backend application.
-- `static/index.html`: The frontend HTML file.
-- `extract_pdf.py`: Original script for reference.
+```
+├── app/
+│   ├── layout.tsx        # Root layout with metadata
+│   ├── page.tsx          # Homepage
+│   └── globals.css       # Global styles
+├── components/
+│   └── ui/               # shadcn/ui components
+│       ├── button.tsx
+│       ├── card.tsx
+│       ├── badge.tsx
+│       └── separator.tsx
+├── lib/
+│   └── utils.ts          # Utility functions
+└── public/               # Static assets
+```
+
+## Components Used
+
+- **Button** - Primary and secondary CTAs
+- **Card** - Feature and use case cards
+- **Badge** - Section labels and tags
+- **Separator** - Visual section dividers
+
+## Customization
+
+### Colors
+The project uses a blue color scheme. To customize:
+- Primary: `blue-600`
+- Adjust in `app/globals.css` or component classes
+
+### Content
+Update content in `/app/page.tsx`:
+- Hero section text and CTAs
+- Feature cards
+- Company statistics
+- Use cases
+- Footer links
+
+### Components
+Add more shadcn/ui components:
+```bash
+npx shadcn@latest add [component-name]
+```
+
+## Learn More
+
+To learn more about the technologies used:
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS](https://tailwindcss.com/docs)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Lucide Icons](https://lucide.dev/)
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new).
+
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## License
+
+All rights reserved © 2026 Legal AI
+
+## Support
+
+For questions or support, contact the development team.
